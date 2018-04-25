@@ -20,5 +20,6 @@ export default class Util{
             this.shaderPrograms[shaderName] = glProgram;
         }
         sprite._sgNode.setShaderProgram(glProgram);
+        return glProgram;
     }
 }
