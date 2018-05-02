@@ -1,4 +1,3 @@
-// import GrayShader from '../Shader/Gray.Shader';
 export default class Util{
     //使用shader
     shaderPrograms:any = {};
@@ -17,9 +16,18 @@ export default class Util{
             }
             glProgram.link();
             glProgram.updateUniforms();
+            glProgram.use();
             this.shaderPrograms[shaderName] = glProgram;
         }
-        sprite._sgNode.setShaderProgram(glProgram);
+        this.setProgram(sprite._sgNode,glProgram);
         return glProgram;
+    };
+    setProgram(node:any,program:any){
+        if(cc.sys.isNative){
+            let glProgram_state = cc.GLProgramState.getOrCreateWithGLProgram(program);
+            node.setGLProgramState(glProgram_state);
+        }else{
+            node.setShaderProgram(program);
+        }
     }
 }
