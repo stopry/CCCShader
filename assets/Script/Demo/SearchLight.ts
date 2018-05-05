@@ -41,6 +41,10 @@ export default class SearchLight extends cc.Component{
             this.changeLight();
         },this);
         
+        this.node.on(cc.Node.EventType.TOUCH_END, function (event) {
+            // cc.log('touch end');
+        }, this);
+
 
         this.program = this.util.useShader(this.logoImg,'searchLight',SearchLightShader);
 
@@ -56,7 +60,19 @@ export default class SearchLight extends cc.Component{
         }
     }
     changeLight(){
-        
+        if(this.program){
+            this.program.use();
+            if(cc.sys.isNative){
+                let glProgram_state = cc.GLProgramState.getOrCreateWithGLProgram(this.program);
+                glProgram_state.setUniformVec2('resolution',this.resolution);
+                glProgram_state.setUniformVec2('mouse',this.mouse);
+            }else{
+                let res = this.program.getUniformLocationForName('resolution');
+                let ms = this.program.getUniformLocationForName('mouse');
+                this.program.setUniformLocationWith2f(res,this.resolution.x,this.resolution.y);
+                this.program.setUniformLocationWith2f(ms,this.mouse.x,this.mouse.y);
+            }
+        }
     }
     update(dt){
 

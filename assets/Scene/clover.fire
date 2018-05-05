@@ -15,19 +15,13 @@
     "_children": [
       {
         "__id__": 2
-      },
-      {
-        "__id__": 6
-      },
-      {
-        "__id__": 8
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [],
     "_prefab": null,
-    "_id": "fc2025ee-71b9-4761-a618-1079fe17cd91",
+    "_id": "a0c00c57-d202-41f9-8fcd-aa2112344035",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -63,17 +57,20 @@
     "_children": [
       {
         "__id__": 3
+      },
+      {
+        "__id__": 5
       }
     ],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 5
+        "__id__": 8
       }
     ],
     "_prefab": null,
-    "_id": "f25DVNK6hAUrUu2XriPa/A",
+    "_id": "66fLBU9ENKWLnoAW55ZBzE",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -125,13 +122,13 @@
       }
     ],
     "_prefab": null,
-    "_id": "f1UZpj0cxNur9+dV5AzLx+",
+    "_id": "b9hvfurR9FYY/ol+Kj9D82",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 27,
-      "g": 27,
-      "b": 27,
+      "r": 9,
+      "g": 13,
+      "b": 20,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -188,56 +185,43 @@
     "_atlas": null
   },
   {
-    "__type__": "cc.Canvas",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 2
-    },
-    "_enabled": true,
-    "_designResolution": {
-      "__type__": "cc.Size",
-      "width": 960,
-      "height": 640
-    },
-    "_fitWidth": false,
-    "_fitHeight": true
-  },
-  {
     "__type__": "cc.Node",
-    "_name": "timg",
+    "_name": "node",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 1
+      "__id__": 2
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
+        "__id__": 6
+      },
+      {
         "__id__": 7
       }
     ],
     "_prefab": null,
-    "_id": "f3J9W10mlEiq6+5vQfFluP",
+    "_id": "383CE9wf1PhbiIzHDFsSq/",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 31,
+      "g": 31,
+      "b": 31,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 0.5,
+      "y": 0.5
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 960,
-      "height": 640
+      "width": 400,
+      "height": 400
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -260,11 +244,11 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 6
+      "__id__": 5
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "dec527a3-c161-4811-a551-3f8b9e14425b"
+      "__uuid__": "8cdb44ac-a3f6-449f-b354-7cd48cf84061"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -282,67 +266,30 @@
     "_atlas": null
   },
   {
-    "__type__": "cc.Node",
-    "_name": "SearchLight",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 1
-    },
-    "_children": [],
-    "_tag": -1,
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 9
-      }
-    ],
-    "_prefab": null,
-    "_id": "17q6RcB7RMsYTRZazZUIPx",
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_cascadeOpacityEnabled": true,
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
-    },
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
-    "_position": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_localZOrder": 0,
-    "_globalZOrder": 0,
-    "_opacityModifyRGB": false,
-    "groupIndex": 0
-  },
-  {
-    "__type__": "f26adPbvGZBuKUVcPHuqRsV",
+    "__type__": "6bfb9V1zG5KrrRcj8XrQaXW",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 8
+      "__id__": 5
     },
     "_enabled": true,
-    "logoImg": {
-      "__id__": 7
-    }
+    "logoImage": null,
+    "shaderName": "clover"
+  },
+  {
+    "__type__": "cc.Canvas",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "_designResolution": {
+      "__type__": "cc.Size",
+      "width": 960,
+      "height": 640
+    },
+    "_fitWidth": false,
+    "_fitHeight": true
   }
 ]
