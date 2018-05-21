@@ -2496,9 +2496,6 @@ declare module cc {
         /** !#en The name of the playing animation.
          !#zh 动画的名字 */
         name: string;
-
-        /**注册回调事件 */
-        on(type: string, callback: (event: Event.EventCustom) => void, target?: any, useCapture?: boolean): (event: Event.EventCustom) => void;
     }
     /** undefined */
     export class Playable {
@@ -3398,6 +3395,10 @@ declare module cc {
     /** !#en cc.game is the singleton object for game related functions.
      !#zh cc.game 是 Game 的实例，用来驱动整个游戏。 */
     export class Game extends EventTarget {
+        /**
+         * 游戏中场景信息，路径和uuid
+         */
+        _sceneInfos;
         /** !#en Event triggered when game hide to background.
          Please note that this event is not 100% guaranteed to be fired on Web platform,
          on native platforms, it corresponds to enter background event, os status bar or notification center may not trigger this event.
@@ -11290,6 +11291,10 @@ declare module cc {
      i.e. "contentSize" != (pixelsWide, pixelsHigh) and (maxS, maxT) != (1.0, 1.0).                                           <br/>
      Be aware that the content of the generated textures will be upside-down! </p> */
     export class Texture2D extends RawAsset implements EventTarget {
+        /**
+         * 纹理id
+         */
+        _glID;
         /** !#en
          The url of the texture, this coule be empty if the texture wasn't created via a file.
          !#zh
